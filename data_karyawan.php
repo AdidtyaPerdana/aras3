@@ -22,7 +22,7 @@
 
     <div class="flex">
         <!-- sidebar -->
-        <aside class="sidebar h-screen sticky top-0 p-2 w-80 overflow-y-auto text-center bg-second-color">
+        <aside class="sidebar h-screen sticky top-0 p-2 overflow-y-auto text-center bg-second-color" style="width: 320px;">
             <div class="text-gray-100 text-xl">
                 <div class="p-2.5 mt-1 flex items-center">
                     <i class="fab fa-dyalog px-2 py-1 bg-button-color"></i>
@@ -42,12 +42,12 @@
             <hr class="my-2 border-1 border-[rgba(196, 196, 196, 1)]">
             <a href="index.php" class="p-2.5 mt-3 flex items-center px-4 duration-300 cursor-pointer hover:bg-button-color text-white">
                 <i class="fas fa-home text-lg"></i>
-                <p class="text-[15px] ml-4">Beranda</p>
+                <p class="text-sm ml-4">Beranda</p>
             </a>
             <div class="p-2.5 mt-3 flex items-center px-4 duration-300 cursor-pointer hover:bg-button-color text-white" onclick="dropdown()">
                 <i class="fas fa-table text-lg"></i>
                 <div class="flex justify-between w-full items-center">
-                    <span class="text-[15px] ml-4">Data Master</span>
+                    <span class="text-sm ml-4">Data Master</span>
                     <span class="text-lg" id="arrow">
                         <i class="fas fa-chevron-down"></i>
                     </span>
@@ -56,24 +56,24 @@
             <div class="text-left mt-2 w-4/5 mx-auto" id="submenu">
                 <a href="data_karyawan.php" class="p-2.5 mt-3 flex items-center px-4 duration-300 cursor-pointer hover:bg-sky-500 bg-button-color text-white">
                     <i class="fas fa-user text-lg"></i>
-                    <p class="text-[15px] ml-4">Data Karyawan</p>
+                    <p class="text-sm ml-4">Data Karyawan</p>
                 </a>
                 <a href="data_kriteria.php" class="p-2.5 mt-3 flex items-center px-4 duration-300 cursor-pointer hover:bg-button-color text-white">
                     <i class="fas fa-th-list"></i>
-                    <p class="text-[15px] ml-4">Data Kriteria</p>
+                    <p class="text-sm ml-4">Data Kriteria</p>
                 </a>
             </div>
             <a href="data_penilaian.php" class="p-2.5 mt-3 flex items-center px-4 duration-300 cursor-pointer hover:bg-button-color text-white">
                 <i class="fas fa-calculator text-lg"></i>
-                <span class="text-[15px] ml-4">Penilaian</span>
+                <span class="text-sm ml-4">Penilaian</span>
             </a>
             <a href="hitung_aras.php" class="p-2.5 mt-3 flex items-center px-4 duration-300 cursor-pointer hover:bg-button-color text-white">
                 <i class="fas fa-chart-bar text-lg"></i>
-                <span class="text-[15px] ml-4">Metode ARAS</span>
+                <span class="text-sm ml-4">Metode ARAS</span>
             </a>
             <a href="laporan.php" class="p-2.5 mt-3 flex items-center px-4 duration-300 cursor-pointer hover:bg-button-color text-white">
                 <i class="fas fa-file text-lg"></i>
-                <span class="text-[15px] ml-4">Laporan</span>
+                <span class="text-sm ml-4">Laporan</span>
             </a>
         </aside>
 
@@ -81,19 +81,18 @@
         <main class="main w-full">
             <!-- navbar -->
             <div class="navbar w-full flex items-center justify-between shadow-bottom pl-2">
-                <?php require "./component/breedcrumb.php" ?>
                 <a href="logout.php" class="bg-button-color px-3 py-3 hover:bg-sky-500">Keluar</a>
             </div>
 
             <!-- title page -->
             <div class="flex items-center px-2 h-14">
-                <h1 class="text-2xl line-height">Data Karyawan</h1>
+                <h1 class="text-xl line-height">Data Karyawan</h1>
             </div>
             <hr class="border-2 border-[rgba(196, 196, 196, 1)] mx-2">
 
-            <div class="mt-5 mb-6 mx-2 p-2 border-2 drop-shadow-md">
+            <div class="mt-5 mb-6 mx-2 p-2 border-2 drop-shadow-md text-sm">
                 <div class="flex items-center justify-between h-14">
-                    <h1 class="text-1xl line-height font-bold">Karyawan</h1>
+                    <h1 class="text-lg line-height font-bold">Karyawan</h1>
                     <div class="flex">
                         <div class="relative flex items-center">
                             <i class="fas fa-search absolute ml-3 text-button-color pointer-events-none"></i>
@@ -110,8 +109,6 @@
                             <th class="py-3 px-6 text-left font-medium tracking-wider">ID Karyawan</th>
                             <th class="py-3 px-6 text-left font-medium tracking-wider">Nama</th>
                             <th class="py-3 px-6 text-left font-medium tracking-wider">Alamat</th>
-                            <th class="py-3 px-6 text-left font-medium tracking-wider">Tempat Lahir</th>
-                            <th class="py-3 px-6 text-left font-medium tracking-wider">Tanggal Lahir</th>
                             <th class="py-3 px-6 text-left font-medium tracking-wider">Jenis Kelamin</th>
                             <th class="py-3 px-6 text-left font-medium tracking-wider">Posisi</th>
                             <th class="py-3 px-6 text-left font-medium tracking-wider">Action</th>
@@ -131,8 +128,6 @@
                                     <td class="py-3 px-6"><?= $row[0] ?></td>
                                     <td class="py-3 px-6"><?= $row[1] ?></td>
                                     <td class="py-3 px-6"><?= $row[2] ?></td>
-                                    <td class="py-3 px-6"><?= $row[3] ?></td>
-                                    <td class="py-3 px-6"><?= $row[4] ?></td>
                                     <td class="py-3 px-6"><?= $row[5] ?></td>
                                     <td class="py-3 px-6"><?= $row[6] ?></td>
                                     <td class="py-3 px-6">

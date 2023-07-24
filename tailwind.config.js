@@ -16,6 +16,9 @@ module.exports = {
       fontFamily: {
         body: ["Lato"],
       },
+      fontSize: {
+        xs: '0.75rem',
+      },
     },
   },
   plugins: [],

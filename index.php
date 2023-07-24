@@ -31,7 +31,7 @@
 
     <div class="flex">
         <!-- sidebar -->
-        <aside class="sidebar h-screen sticky top-0 p-2 w-80 overflow-y-auto text-center bg-second-color">
+        <aside class="sidebar h-screen sticky top-0 p-2 overflow-y-auto text-center bg-second-color" style="width: 320px;">
             <div class="text-gray-100 text-xl">
                 <div class="p-2.5 mt-1 flex items-center">
                     <i class="fab fa-dyalog px-2 py-1 bg-button-color"></i>
@@ -51,12 +51,12 @@
             <hr class="my-2 border-1 border-[rgba(196, 196, 196, 1)]">
             <a href="index.php" class="p-2.5 mt-3 flex items-center px-4 duration-300 cursor-pointer bg-button-color hover:bg-sky-500 text-white">
                 <i class="fas fa-home text-lg"></i>
-                <p class="text-[15px] ml-4">Beranda</p>
+                <p class="text-sm ml-4">Beranda</p>
             </a>
             <div class="p-2.5 mt-3 flex items-center px-4 duration-300 cursor-pointer hover:bg-button-color text-white" onclick="dropdown()">
                 <i class="fas fa-table text-lg"></i>
                 <div class="flex justify-between w-full items-center">
-                    <span class="text-[15px] ml-4">Data Master</span>
+                    <span class="text-sm ml-4">Data Master</span>
                     <span class="text-lg" id="arrow">
                         <i class="fas fa-chevron-down"></i>
                     </span>
@@ -65,24 +65,24 @@
             <div class="text-left mt-2 w-4/5 mx-auto hidden" id="submenu">
                 <a href="data_karyawan.php" class="p-2.5 mt-3 flex items-center px-4 duration-300 cursor-pointer hover:bg-button-color text-white">
                     <i class="fas fa-user text-lg"></i>
-                    <p class="text-[15px] ml-4">Data Karyawan</p>
+                    <p class="text-sm ml-4">Data Karyawan</p>
                 </a>
                 <a href="data_kriteria.php" class="p-2.5 mt-3 flex items-center px-4 duration-300 cursor-pointer hover:bg-button-color text-white">
                     <i class="fas fa-th-list"></i>
-                    <p class="text-[15px] ml-4">Data Kriteria</p>
+                    <p class="text-sm ml-4">Data Kriteria</p>
                 </a>
             </div>
             <a href="data_penilaian.php" class="p-2.5 mt-3 flex items-center px-4 duration-300 cursor-pointer hover:bg-button-color text-white">
                 <i class="fas fa-calculator text-lg"></i>
-                <span class="text-[15px] ml-4">Penilaian</span>
+                <span class="text-sm ml-4">Penilaian</span>
             </a>
             <a href="hitung_aras.php" class="p-2.5 mt-3 flex items-center px-4 duration-300 cursor-pointer hover:bg-button-color text-white">
                 <i class="fas fa-chart-bar text-lg"></i>
-                <span class="text-[15px] ml-4">Metode ARAS</span>
+                <span class="text-sm ml-4">Metode ARAS</span>
             </a>
             <a href="laporan.php" class="p-2.5 mt-3 flex items-center px-4 duration-300 cursor-pointer hover:bg-button-color text-white">
                 <i class="fas fa-file text-lg"></i>
-                <span class="text-[15px] ml-4">Laporan</span>
+                <span class="text-sm ml-4">Laporan</span>
             </a>
         </aside>
 
@@ -90,7 +90,7 @@
         <main class="main w-full">
             <!-- navbar -->
             <div class="navbar w-full flex items-center justify-between shadow-bottom pl-2">
-                <?php require "./component/breedcrumb.php" ?>
+                <a class="navbar-brand tanggal-navbar"></a>
                 <a href="logout.php" class="bg-button-color px-3 py-3 hover:bg-sky-500">Keluar</a>
             </div>
 
@@ -104,11 +104,11 @@
                 <p class="font-light">Selamat datang di</p>
                 <h1 class="text-4xl w-9/12 text-center font-bold">SISTEM PEMBANTU KEPUTUSAN MENENTUKAN KINERJA KARYAWAN</h1>
                 <div class="flex flex-wrap justify-center">
-                    <div class="w-80 mx-9 bg-second-color mt-5">
-                        <div class="p-4">
+                    <div class="mx-9 bg-second-color mt-5" style="width: 256px;">
+                        <div class="p-5">
                             <div class="text-white">
                                 <div class="flex items-center">
-                                    <i class="fas fa-users text-9xl mr-3 text-button-color"></i>
+                                    <i class="fas fa-users text-8xl mr-3 text-button-color"></i>
                                     <div class="flex justify-center w-full">
                                         <h2 class="font-bold text-7xl"><?= $totalKaryawan[0]; ?></h2>
                                     </div>
@@ -117,11 +117,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-80 mx-9 bg-second-color mt-5">
+                    <div class="mx-9 bg-second-color mt-5" style="width: 256px;">
                         <div class="p-4">
                             <div class="text-white">
                                 <div class="flex items-center">
-                                    <i class="fas fa-list-alt text-9xl mr-3 text-button-color"></i>
+                                    <i class="fas fa-list-alt text-8xl mr-3 text-button-color"></i>
                                     <div class="flex justify-center w-full">
                                         <h2 class="font-bold text-7xl"><?= $totalKriteria[0] ?></h2>
                                     </div>
@@ -130,11 +130,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-80 mx-9 bg-second-color mt-5">
+                    <div class="mx-9 bg-second-color mt-5" style="width: 256px;">
                         <div class="p-4">
                             <div class="text-white">
                                 <div class="flex items-center">
-                                    <i class="fas fa-user text-9xl text-button-color"></i>
+                                    <i class="fas fa-user text-8xl text-button-color"></i>
                                     <div class="flex justify-center w-full">
                                         <h2 class="font-bold text-7xl"><?= $totalUser[0] ?></h2>
                                     </div>

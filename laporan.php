@@ -44,12 +44,12 @@
             <hr class="my-2 border-1 border-[rgba(196, 196, 196, 1)]">
             <a href="index.php" class="p-2.5 mt-3 flex items-center px-4 duration-300 cursor-pointer hover:bg-button-color text-white">
                 <i class="fas fa-home text-lg"></i>
-                <p class="text-[15px] ml-4">Beranda</p>
+                <p class="text-sm ml-4">Beranda</p>
             </a>
             <div class="p-2.5 mt-3 flex items-center px-4 duration-300 cursor-pointer hover:bg-button-color text-white" onclick="dropdown()">
                 <i class="fas fa-table text-lg"></i>
                 <div class="flex justify-between w-full items-center">
-                    <span class="text-[15px] ml-4">Data Master</span>
+                    <span class="text-sm ml-4">Data Master</span>
                     <span class="text-lg" id="arrow">
                         <i class="fas fa-chevron-down"></i>
                     </span>
@@ -58,24 +58,24 @@
             <div class="text-left mt-2 w-4/5 mx-auto hidden" id="submenu">
                 <a href="data_karyawan.php" class="p-2.5 mt-3 flex items-center px-4 duration-300 cursor-pointer hover:bg-button-color text-white">
                     <i class="fas fa-user text-lg"></i>
-                    <p class="text-[15px] ml-4">Data Karyawan</p>
+                    <p class="text-sm ml-4">Data Karyawan</p>
                 </a>
                 <a href="data_kriteria.php" class="p-2.5 mt-3 flex items-center px-4 duration-300 cursor-pointer hover:bg-button-color text-white">
                     <i class="fas fa-th-list"></i>
-                    <p class="text-[15px] ml-4">Data Kriteria</p>
+                    <p class="text-sm ml-4">Data Kriteria</p>
                 </a>
             </div>
             <a href="data_penilaian.php" class="p-2.5 mt-3 flex items-center px-4 duration-300 cursor-pointer hover:bg-button-color text-white">
                 <i class="fas fa-calculator text-lg"></i>
-                <span class="text-[15px] ml-4">Penilaian</span>
+                <span class="text-sm ml-4">Penilaian</span>
             </a>
             <a href="hitung_aras.php" class="p-2.5 mt-3 flex items-center px-4 duration-300 cursor-pointer hover:bg-button-color text-white">
                 <i class="fas fa-chart-bar text-lg"></i>
-                <span class="text-[15px] ml-4">Metode ARAS</span>
+                <span class="text-sm ml-4">Metode ARAS</span>
             </a>
             <a href="laporan.php" class="p-2.5 mt-3 flex items-center px-4 duration-300 cursor-pointer bg-button-color hover:bg-sky-500 text-white">
                 <i class="fas fa-file text-lg"></i>
-                <span class="text-[15px] ml-4">Laporan</span>
+                <span class="text-sm ml-4">Laporan</span>
             </a>
         </aside>
 
@@ -83,7 +83,6 @@
         <main class="main w-full">
             <!-- navbar -->
             <div class="navbar w-full flex items-center justify-between shadow-bottom pl-2">
-                <?php require "./component/breedcrumb.php" ?>
                 <a href="logout.php" class="bg-button-color px-3 py-3 hover:bg-sky-500">Keluar</a>
             </div>
 
@@ -99,7 +98,7 @@
                 </div>
                 <hr class="border-2 border-[rgba(196, 196, 196, 1)]">
             </div>
-            <div class="mt-5 mb-6 mx-2 p-2 border-2 drop-shadow-md">
+            <div class="mt-5 mb-6 mx-2 p-2 border-2 drop-shadow-md text-sm">
                 <div class="flex w-full">
                     <div class="flex-auto border-2 p-2 drop-shadow-md w-8/12">
                         <canvas class="" id="myChart"></canvas>

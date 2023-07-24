@@ -1,5 +1,5 @@
 <!-- Modal add karyawan -->
-<div class="modal-add-karyawan w-full h-screen absolute left-0 top-0 flex justify-center items-center bg-black bg-opacity-50 hidden">
+<div class="modal-add-karyawan w-full h-screen absolute left-0 top-0 flex justify-center items-center bg-black bg-opacity-50 hidden text-sm">
     <div class="w-1/3 bg-primary-color rounded-mg shadow-lg p-5">
         <div class="flex justify-between">
             <h1 class="text-center">Tambah Karyawan</h1>

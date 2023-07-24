@@ -35,12 +35,12 @@
             <hr class="my-2 border-1 border-[rgba(196, 196, 196, 1)]">
             <a href="index.php" class="p-2.5 mt-3 flex items-center px-4 duration-300 cursor-pointer hover:bg-button-color text-white">
                 <i class="fas fa-home text-lg"></i>
-                <p class="text-[15px] ml-4">Beranda</p>
+                <p class="text-sm ml-4">Beranda</p>
             </a>
             <div class="p-2.5 mt-3 flex items-center px-4 duration-300 cursor-pointer hover:bg-button-color text-white" onclick="dropdown()">
                 <i class="fas fa-table text-lg"></i>
                 <div class="flex justify-between w-full items-center">
-                    <span class="text-[15px] ml-4">Data Master</span>
+                    <span class="text-sm ml-4">Data Master</span>
                     <span class="text-lg" id="arrow">
                         <i class="fas fa-chevron-down"></i>
                     </span>
@@ -49,24 +49,24 @@
             <div class="text-left mt-2 w-4/5 mx-auto hidden" id="submenu">
                 <a href="data_karyawan.php" class="p-2.5 mt-3 flex items-center px-4 duration-300 cursor-pointer hover:bg-button-color text-white">
                     <i class="fas fa-user text-lg"></i>
-                    <p class="text-[15px] ml-4">Data Karyawan</p>
+                    <p class="text-sm ml-4">Data Karyawan</p>
                 </a>
                 <a href="data_kriteria.php" class="p-2.5 mt-3 flex items-center px-4 duration-300 cursor-pointer hover:bg-button-color text-white">
                     <i class="fas fa-th-list"></i>
-                    <p class="text-[15px] ml-4">Data Kriteria</p>
+                    <p class="text-sm ml-4">Data Kriteria</p>
                 </a>
             </div>
             <a href="data_penilaian.php" class="p-2.5 mt-3 flex items-center px-4 duration-300 cursor-pointer hover:bg-button-color text-white">
                 <i class="fas fa-calculator text-lg"></i>
-                <span class="text-[15px] ml-4">Penilaian</span>
+                <span class="text-sm ml-4">Penilaian</span>
             </a>
             <a href="hitung_aras.php" class="p-2.5 mt-3 flex items-center px-4 duration-300 cursor-pointer bg-button-color hover:bg-sky-500 text-white">
                 <i class="fas fa-chart-bar text-lg"></i>
-                <span class="text-[15px] ml-4">Metode ARAS</span>
+                <span class="text-sm ml-4">Metode ARAS</span>
             </a>
             <a href="laporan.php" class="p-2.5 mt-3 flex items-center px-4 duration-300 cursor-pointer hover:bg-button-color text-white">
                 <i class="fas fa-file text-lg"></i>
-                <span class="text-[15px] ml-4">Laporan</span>
+                <span class="text-sm ml-4">Laporan</span>
             </a>
         </aside>
 
@@ -74,7 +74,6 @@
         <main class="main w-full">
             <!-- navbar -->
             <div class="navbar w-full flex items-center justify-between shadow-bottom pl-2">
-                <?php require "./component/breedcrumb.php" ?>
                 <a href="logout.php" class="bg-button-color px-3 py-3 hover:bg-sky-500">Keluar</a>
             </div>
 
@@ -85,7 +84,7 @@
             <hr class="border-2 border-[rgba(196, 196, 196, 1)] mx-2">
 
             <!-- Matrix X -->
-            <div class="mt-5 mb-6 mx-2 p-2 border-2 drop-shadow-md">
+            <div class="mt-5 mb-6 mx-2 p-2 border-2 drop-shadow-md text-sm">
                 <div class="flex items-center justify-between h-14">
                     <h1 class="text-1xl line-height font-bold">Matrix X</h1>
                 </div>
@@ -98,7 +97,7 @@
                             <th class="py-3 px-6 text-left font-medium tracking-wider text-center">Absensi</th>
                             <th class="py-3 px-6 text-left font-medium tracking-wider text-center">Disiplin</th>
                             <th class="py-3 px-6 text-left font-medium tracking-wider text-center">Kualitas Kerja</th>
-                            <th class="py-3 px-6 text-left font-medium tracking-wider text-center">Kuantitas Kerja</th>
+                            <th class="py-3 px-6 text-left font-medium tracking-wider text-center">Komunikasi</th>
                             <th class="py-3 px-6 text-left font-medium tracking-wider text-center">Kerjasama</th>
                         </tr>
                     </thead>
@@ -159,14 +158,14 @@
                         <p>Absensi : <?= $maxC1 ?></p>
                         <p>Disiplin : <?= $maxC2 ?></p>
                         <p>Kualitas Kerja : <?= $maxC3 ?></p>
-                        <p>Kuantitas Kerja : <?= $maxC4 ?></p>
+                        <p>Komunikasi : <?= $maxC4 ?></p>
                         <p>Kerjasama : <?= $maxC5 ?></p>
                     </div>
                 </div>
             </div>
 
             <!-- Matrix ternormalisasi aras  -->
-            <div class="mt-5 mb-6 mx-2 p-2 border-2 drop-shadow-md">
+            <div class="mt-5 mb-6 mx-2 p-2 border-2 drop-shadow-md text-sm">
                 <div class="flex items-center justify-between h-14">
                     <h1 class="text-1xl line-height font-bold">Matrix Ternormalisasi</h1>
                 </div>
@@ -179,7 +178,7 @@
                             <th class="py-3 px-6 text-left font-medium tracking-wider text-center">Absensi</th>
                             <th class="py-3 px-6 text-left font-medium tracking-wider text-center">Disiplin</th>
                             <th class="py-3 px-6 text-left font-medium tracking-wider text-center">Kualitas Kerja</th>
-                            <th class="py-3 px-6 text-left font-medium tracking-wider text-center">Kuantitas Kerja</th>
+                            <th class="py-3 px-6 text-left font-medium tracking-wider text-center">Komunikasi</th>
                             <th class="py-3 px-6 text-left font-medium tracking-wider text-center">Kerjasama</th>
                         </tr>
                     </thead>
@@ -205,11 +204,11 @@
                         <tr>
                             <td class="py-3 px-6"><?= $no ?></td>
                             <td class="py-3 px-6">A0</td>
-                            <td class="py-3 px-6 text-center"><?= round($maxC1/$C1sum, 3) ?></td>
-                            <td class="py-3 px-6 text-center"><?= round($maxC2/$C2sum, 3) ?></td>
-                            <td class="py-3 px-6 text-center"><?= round($maxC3/$C3sum, 3) ?></td>
-                            <td class="py-3 px-6 text-center"><?= round($maxC4/$C4sum, 3) ?></td>
-                            <td class="py-3 px-6 text-center"><?= round($maxC5/$C5sum, 3) ?></td>
+                            <td class="py-3 px-6 text-center"><?= number_format(round($maxC1/$C1sum, 3), 3) ?></td>
+                            <td class="py-3 px-6 text-center"><?= number_format(round($maxC2/$C2sum, 3), 3) ?></td>
+                            <td class="py-3 px-6 text-center"><?= number_format(round($maxC3/$C3sum, 3), 3) ?></td>
+                            <td class="py-3 px-6 text-center"><?= number_format(round($maxC4/$C4sum, 3), 3) ?></td>
+                            <td class="py-3 px-6 text-center"><?= number_format(round($maxC5/$C5sum, 3), 3) ?></td>
                         </tr>
                         <!-- Insert data karyawan -->
                         <?php
@@ -221,11 +220,11 @@
                                 <tr>
                                     <td class="py-3 px-6"><?php echo $no = $no + 1; ?></td>
                                     <td class="py-3 px-6"><?= $row[2] ?></td>
-                                    <td class="py-3 px-6 text-center"><?= round($row[3]/$C1sum, 3) ?></td>
-                                    <td class="py-3 px-6 text-center"><?= round($row[4]/$C2sum, 3) ?></td>
-                                    <td class="py-3 px-6 text-center"><?= round($row[5]/$C3sum, 3) ?></td>
-                                    <td class="py-3 px-6 text-center"><?= round($row[6]/$C4sum, 3) ?></td>
-                                    <td class="py-3 px-6 text-center"><?= round($row[7]/$C5sum, 3) ?></td>
+                                    <td class="py-3 px-6 text-center"><?= number_format(round($row[3]/$C1sum, 3), 3) ?></td>
+                                    <td class="py-3 px-6 text-center"><?= number_format(round($row[4]/$C2sum, 3), 3) ?></td>
+                                    <td class="py-3 px-6 text-center"><?= number_format(round($row[5]/$C3sum, 3), 3) ?></td>
+                                    <td class="py-3 px-6 text-center"><?= number_format(round($row[6]/$C4sum, 3), 3) ?></td>
+                                    <td class="py-3 px-6 text-center"><?= number_format(round($row[7]/$C5sum, 3), 3) ?></td>
                                 </tr>
                         <?php
                             }
@@ -240,14 +239,14 @@
                         <p>Absensi : <?= $C1sum ?></p>
                         <p>Disiplin : <?= $C2sum ?></p>
                         <p>Kualitas Kerja : <?= $C3sum ?></p>
-                        <p>Kuantitas Kerja : <?= $C4sum ?></p>
+                        <p>Komunikasi : <?= $C4sum ?></p>
                         <p>Kerjasama : <?= $C5sum ?></p>
                     </div>
                 </div>
             </div>
 
             <!-- Bobot matrix ternormalisasi -->
-            <div class="mt-5 mb-6 mx-2 p-2 border-2 drop-shadow-md">
+            <div class="mt-5 mb-6 mx-2 p-2 border-2 drop-shadow-md text-sm">
                 <div class="flex items-center justify-between h-14">
                     <h1 class="text-1xl line-height font-bold">Bobot Matrix Ternormalisasi</h1>
                 </div>
@@ -260,7 +259,7 @@
                             <th class="py-3 px-6 text-left font-medium tracking-wider text-center">Absensi</th>
                             <th class="py-3 px-6 text-left font-medium tracking-wider text-center">Disiplin</th>
                             <th class="py-3 px-6 text-left font-medium tracking-wider text-center">Kualitas Kerja</th>
-                            <th class="py-3 px-6 text-left font-medium tracking-wider text-center">Kuantitas Kerja</th>
+                            <th class="py-3 px-6 text-left font-medium tracking-wider text-center">Komunikasi</th>
                             <th class="py-3 px-6 text-left font-medium tracking-wider text-center">Kerjasama</th>
                         </tr>
                     </thead>
@@ -319,7 +318,7 @@
                         <p>Absensi : <?= $bobotkriteria[0] ?></p>
                         <p>Disiplin : <?= $bobotkriteria[1] ?></p>
                         <p>Kualitas Kerja : <?= $bobotkriteria[2] ?></p>
-                        <p>Kuantitas Kerja : <?= $bobotkriteria[3] ?></p>
+                        <p>Komunikasi : <?= $bobotkriteria[3] ?></p>
                         <p>Kerjasama : <?= $bobotkriteria[4] ?></p>
                     </div>
                 </div>
@@ -328,7 +327,7 @@
             <!-- // Hasil Akhir Perhitungan -->
             <div class="flex">
                 <!-- Nilai fungsi optimum -->
-                <div class="flex-auto mt-5 mb-6 mx-2 p-2 border-2 drop-shadow-md">
+                <div class="flex-auto mt-5 mb-6 mx-2 p-2 border-2 drop-shadow-md text-sm">
                     <div class="flex items-center justify-between h-14">
                         <h1 class="text-1xl line-height font-bold">Nilai Fungsi Optimum</h1>
                     </div>
@@ -392,7 +391,7 @@
                 </div>
 
                 <!-- Hasil perangkingan -->
-                <div class="flex-auto mt-5 mb-6 mx-2 p-2 border-2 drop-shadow-md">
+                <div class="flex-auto mt-5 mb-6 mx-2 p-2 border-2 drop-shadow-md text-sm">
                     <div class="flex items-center justify-between h-14">
                         <h1 class="text-1xl line-height font-bold">Hasil Perangkingan</h1>
                     </div>
