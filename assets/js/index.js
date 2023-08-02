@@ -56,7 +56,6 @@ $(".btn-edit-karyawan").click(function () {
 
 //Modal edit kriteria
 $(".btn-edit-kriteria").click(function () {
-  console.log("tes");
   document.querySelector(".modal-edit-kriteria").classList.toggle("hidden");
   var id = $(this).data("id");
   $.ajax({
@@ -68,30 +67,3 @@ $(".btn-edit-kriteria").click(function () {
     },
   });
 });
-
-var months = [
-  "Januari",
-  "Februari",
-  "Maret",
-  "April",
-  "Mai",
-  "Juni",
-  "Juli",
-  "Agustus",
-  "September",
-  "October",
-  "November",
-  "December",
-];
-
-const date = new Date();
-
-let day = date.getDate();
-
-let month = months[date.getMonth()];
-
-const today = day + "/" + month + "/" + date.getFullYear();
-
-let dateNavbar = document.querySelector(".tanggal-navbar");
-
-dateNavbar.innerHTML = today;
